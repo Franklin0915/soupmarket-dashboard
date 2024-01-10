@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* styles.css or styles.scss */
+
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0;  }
+*{
+    font-family:lato;;
+}
+
+/* dark-theme.css */
+
+/* Define your primary and accent colors for the dark theme */
+:root {
+  --dark-primary: #512da8; /* Adjust the color values as needed */
+  --dark-accent: #ff8f00; /* Adjust the color values as needed */
+}
+
+/* Apply the dark theme styles to specific components */
+.dark-theme mat-card {
+  background-color: var(--dark-primary);
+  color: white;
+  /* Add other dark theme styles as needed */
+}
+
