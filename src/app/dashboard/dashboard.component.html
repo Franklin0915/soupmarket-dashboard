@@ -1,12 +1,64 @@
-<div class="main">
+<!-- dashboard.component.html -->
+
+<div class="main" >
     <div class="sidenav"><app-sidenav></app-sidenav></div>
     <div class="pageContent">
-       <div class="nav"> 
+      
+
+      <div class="nav">
         <app-main-nav></app-main-nav>
-       </div> 
-       
-        
-        <div class="dashboard"></div>
-        
+      </div>
+      <div class="intro">
+        <div class="dash">
+            <aside>Dashboard</aside>
+        </div>
+      <div class="others">
+        <aside class="mag-1">Portfolio breakdown</aside>
+        <aside class="vr"></aside>
+        <aside class="mag-2">Statements & reports</aside>
+      </div>
+     
     </div>
+      <div class="first-block">
+        <div class="line-graph">
+          <ngx-charts-line-chart
+          [view]="smallerView"
+          [scheme]="colorScheme"
+          [results]="lineChartData"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel">
+        </ngx-charts-line-chart>
+        </div>
+        <div class="acc-details">
+          <aside class="l-1">
+            <aside class="mag-3"><p>Account balance</p></aside>
+            <i class="fa-solid fa-eye"></i>
+          </aside>
+          <aside class="amount">
+            <i class="fa-solid fa-cedi-sign"></i><p>10</p>
+          </aside>
+
+        </div>
+      </div>
+      <!-- <mat-progress-bar
+  class="mat-progress-bar-striped"
+  mode="determinate"
+  [value]="progressValue"
+></mat-progress-bar>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="progressValue">
+    {{ progressValue }}%
+  </div>
 </div>
+       -->
+ 
+    </div>
+  </div>
+  

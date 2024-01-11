@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class SidenavComponent {
 
+     colorMode = 'lightMode';
+    toggleMode(){
+      if(this.colorMode ==='lightMode'){
+        this.colorMode ='darkMode';
+      }
+      else{
+        this.colorMode = 'lightMode';
+      }
+    }
 }

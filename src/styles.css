@@ -2,6 +2,8 @@
 
 /* styles.css or styles.scss */
 
+/* styles.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -26,4 +28,17 @@ body { margin: 0;  }
   color: white;
   /* Add other dark theme styles as needed */
 }
+body{
+  background-color: #512da8#f7f7f7;
+  transition: all .3s ease-in-out;
+}
+.lightMode{
+  background-color: white;
+  color: black;
+}
+.darkMode{
+  background-color: rgb(2, 2, 18);
+  color: white;
+}
+
 

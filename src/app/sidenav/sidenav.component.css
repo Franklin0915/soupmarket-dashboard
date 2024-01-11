@@ -80,3 +80,22 @@ h1{
   .fa-right-from-bracket{
     margin: 0 0 10px 10px;
   }
+  ::ng-deep .mat-slide-toggle {
+    padding: 10px;
+  }
+  
+  ::ng-deep .mat-slide-toggle-label {
+    padding: 100px;
+  }
+ /* your.component.css */
+
+/* Styles for the SVG icons */
+.modes svg {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+}
+.modes{
+  display: flex;
+  align-items: center;
+  margin: 0 2rem 0 0;
+}
