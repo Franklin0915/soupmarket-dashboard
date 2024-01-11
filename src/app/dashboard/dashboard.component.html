@@ -6,7 +6,7 @@
       
 
       <div class="nav">
-        <app-main-nav></app-main-nav>
+        <app-main-nav class="n1"></app-main-nav>
       </div>
       <div class="intro">
         <div class="dash">
@@ -21,7 +21,7 @@
     </div>
       <div class="first-block">
         <div class="line-graph">
-          <ngx-charts-line-chart
+          <!-- <ngx-charts-line-chart
           [view]="smallerView"
           [scheme]="colorScheme"
           [results]="lineChartData"
@@ -33,7 +33,8 @@
           [showYAxisLabel]="showYAxisLabel"
           [xAxisLabel]="xAxisLabel"
           [yAxisLabel]="yAxisLabel">
-        </ngx-charts-line-chart>
+        </ngx-charts-line-chart> -->
+        <app-smooth-area-chart />
         </div>
         <div class="acc-details">
           <aside class="l-1">
@@ -46,18 +47,20 @@
 
         </div>
       </div>
+      <button (click)="toAreaChart()">chart</button>
       <!-- <mat-progress-bar
   class="mat-progress-bar-striped"
   mode="determinate"
   [value]="progressValue"
-></mat-progress-bar>
+></mat-progress-bar> -->
 
 <div class="progress">
-  <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="progressValue">
+  <!-- <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="progressValue">
     {{ progressValue }}%
-  </div>
+  </div> -->
 </div>
-       -->
+
+      
  
     </div>
   </div>

@@ -12,13 +12,16 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { SmoothAreaChartComponent } from './smooth-area-chart/smooth-area-chart.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     SidenavComponent,
-    MainNavComponent
+    MainNavComponent,
+    SmoothAreaChartComponent
   ],
   imports: [
     BrowserModule,

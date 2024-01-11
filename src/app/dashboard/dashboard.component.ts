@@ -8,6 +8,10 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { Chart } from 'chart.js';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ChartConfiguration, ChartType, ChartDataset } from 'chart.js';
+import { SmoothAreaChartComponent } from '../smooth-area-chart/smooth-area-chart.component';
+
+
 
 
 @Component({
@@ -23,6 +27,12 @@ constructor(private route:Router){}
     toNav(){
       this.route.navigate(["/mainNav"])
     }
+    // ngOnInit(): void {
+    //   this.createSmoothAreaChart();
+    // }
+   toAreaChart(){
+    this.route.navigate(["/areaChart"])
+   }
     progressValue: number = 50;
 
     smallerView: [number, number] = [700, 200];
@@ -59,6 +69,57 @@ constructor(private route:Router){}
   showYAxisLabel: boolean = true;
   xAxisLabel: string = 'X-Axis Label';
   yAxisLabel: string = 'Y-Axis Label';
+  
+//  inputs = {
+//     min: -100,
+//     max: 100,
+//     count: 8,
+//     decimals: 2,
+//     continuity: 1
+//   };
+  
+//    generateLabels = (): string[] => {
+//     // Assuming Utils is an object with a months function
+//     return Utils.months({ count: this.inputs.count });
+//   };
+  
+//    generateData = (): number[] => {
+//     // Assuming Utils is an object with a numbers function
+//     return Utils.numbers(inputs);
+//   };
+  
+//   data: ChartDataset[] = [
+//     {
+//       label: 'Dataset',
+//       data: this.generateData(),
+//       borderColor:Chart.,
+//       backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
+//       fill: false
+//     }
+//   ];
+  
+//   config: ChartConfiguration<ChartType> = {
+//     type: 'line',
+//     data: {
+//       labels: this.generateLabels(),
+//       datasets: this.data,
+//     },
+//     options: {
+//       plugins: {
+//         filler: {
+//           propagate: false,
+//         },
+//         title: {
+//           display: true,
+//           text: (ctx) => 'Fill: ' + (ctx.chart.data?.datasets[0].fill || ''),
+//         },
+//       },
+//       interaction: {
+//         intersect: false,
+//       },
+//     },
+//   };
+  
 
-   
+
 }
