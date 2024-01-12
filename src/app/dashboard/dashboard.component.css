@@ -37,6 +37,7 @@ body {
 .nav {
   background-color: white;
   width: 100%; /* Set the width to 100% */
+  
 }
 
 .intro {
@@ -68,8 +69,8 @@ body {
 }
 
 .line-graph {
-  height: 250px;
-  width: 60%;
+  height: 300px;
+  width: 50%;
   margin: 1rem 0 0 2rem;
   border-radius: 20px;
   background-color: white;
@@ -78,6 +79,9 @@ body {
 .first-block {
   display: flex;
   align-items: center;
+  /* border: 1px solid black; */
+  overflow-y: hidden;
+  
 }
 
 .l-1 {
@@ -88,7 +92,11 @@ body {
 
 .acc-details {
   width: 40%;
-  height: 250px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 10px 0 0 2.5rem;
+  
 }
 
 .mag-3 {
@@ -102,12 +110,57 @@ body {
 .amount {
   display: flex;
   align-items: center;
+  /* height: 100px; */
+  font-size: 35px;
+  margin:0 0 0 1rem;
 }
 
 .fa-cedi-sign {
-  margin: 0 2px 11px 20px;
-  font-size: 10px
+  
+  margin: 0 0 45px 0;
 }
 .n1{
   width: 100%;
+  overflow-y: hidden;
+}
+.amt {
+  height: 50px;
+  /* font-size: 50px; */
+  overflow-y: hidden;
+  margin: 0 0 30px 0;
+  text-align: center;
+  padding: 5px;
+}
+hr{
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2.5rem 1.5rem ;
+}
+.acc-last{
+  display: flex;
+  align-items: center;
+  margin: 0 0 2rem 2rem;
+  justify-content: space-between;
+
+}
+.btn-1{
+  border-radius: 5px;
+  background-color: rgb(6, 6, 95);
+  width: 220px;
+  padding: 10px;
+  color: white;
+  margin: 0 1.5rem 0 0;
+}
+.btn-2{
+  border-radius: 5px;
+  width: 220px;
+  padding: 10px;
+  color: rgb(6, 6, 95) ;
+  margin: 0 1.5rem 0 0 ;
+  background-color: white;
+  
+}
+.mag-4{
+  margin: 0 0 0 2rem;
 }

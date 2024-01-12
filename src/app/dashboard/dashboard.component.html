@@ -20,45 +20,29 @@
      
     </div>
       <div class="first-block">
-        <div class="line-graph">
-          <!-- <ngx-charts-line-chart
-          [view]="smallerView"
-          [scheme]="colorScheme"
-          [results]="lineChartData"
-          [gradient]="gradient"
-          [xAxis]="showXAxis"
-          [yAxis]="showYAxis"
-          [legend]="showLegend"
-          [showXAxisLabel]="showXAxisLabel"
-          [showYAxisLabel]="showYAxisLabel"
-          [xAxisLabel]="xAxisLabel"
-          [yAxisLabel]="yAxisLabel">
-        </ngx-charts-line-chart> -->
-        <app-smooth-area-chart />
-        </div>
-        <div class="acc-details">
-          <aside class="l-1">
-            <aside class="mag-3"><p>Account balance</p></aside>
-            <i class="fa-solid fa-eye"></i>
-          </aside>
-          <aside class="amount">
-            <i class="fa-solid fa-cedi-sign"></i><p>10</p>
-          </aside>
+          <div class="line-graph">
+          <app-smooth-area-chart />
+          </div>
+          <div class="acc-details">
+            <aside class="l-1">
+              <aside class="mag-3"><p>Account balance</p></aside>
+              <i class="fa-solid fa-eye"></i>
+            </aside>
+            <aside class="amount">
+              <i class="fa-solid fa-cedi-sign"></i><aside class="amt">10</aside>
+            </aside>
+            <hr>
+            <div class="f-b-e">
+              <aside class="mag-4"><p>See your orders</p></aside>
+            <aside class="acc-last">
+              <button class="btn-1">Deposit</button>
+              <button class="btn-2">Withdraw</button>
+            </aside>
+            </div>
+            
 
-        </div>
+          </div>
       </div>
-      <button (click)="toAreaChart()">chart</button>
-      <!-- <mat-progress-bar
-  class="mat-progress-bar-striped"
-  mode="determinate"
-  [value]="progressValue"
-></mat-progress-bar> -->
-
-<div class="progress">
-  <!-- <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="progressValue">
-    {{ progressValue }}%
-  </div> -->
-</div>
 
       
  
