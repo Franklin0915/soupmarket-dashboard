@@ -4,8 +4,9 @@
     <div class="sidenav"><app-sidenav></app-sidenav></div>
     <div class="pageContent">
       
-
+     
       <div class="nav">
+      
         <app-main-nav class="n1"></app-main-nav>
       </div>
       <div class="intro">
@@ -43,9 +44,146 @@
 
           </div>
       </div>
+      <div class="midline-label">
+        <aside>Starter guide</aside>
+        <aside class="mag-5">See user guide</aside>
+      </div>
+      <div class="mid-line">
+          <div class="d-1"><img src="assets/Franklin/Franklin/trading_icon 1.svg"/></div>
+          <div class="d-2"><img src="assets/Franklin/Franklin/money-recive.svg"/></div>
+          <div class="d-3"><img src="assets/Franklin/Franklin/stocks 1.svg"/></div>
+          <div class="d-4"><img src="assets/Franklin/Franklin/money 1.svg"/></div>
+          <div class="d-5"><img src="assets/Franklin/Franklin/money-recive.svg"/></div>
+          <div class="d-6"> <img src="assets/Franklin/Franklin/markets 2.svg"/></div>
+          <div class="d-7"><img src="assets/Franklin/Franklin/stocks 1.svg"/></div>
+  
+       </div>
+       
+        <div class="assets">
+          <div class="first-asset">
+            <ng-container *ngFor="let item of service.data">
+              <ng-container *ngIf="!hasTermKey(item); else goilTemplate">
+          
+                <div class="goil">
+                  <div class="f-name">
+                    {{item.fullname}}
+                  </div>
+                  <div class="wrapper">
+                    <div class="">
+                      <img src="{{ item.image }}" height="50px" />
+                      {{ item.name }}
+                    </div>
+                    <div class="price">
+                      <div>Price</div>
+                      <div class="flex-price">
+                        <i class="fa-solid fa-cedi-sign"></i>
+                        <p>{{ item.price }}</p>
+                      </div>
+                    </div>
+                    <div class="pointer" [class]="getPointerClass(item.figure)">
+                      <i class="fa-solid fa-caret-down" *ngIf="item.figure < 0"></i>
+                      <i class="fa-solid fa-caret-up" *ngIf="item.figure > 0"></i>
+                      %{{ item.figure }}
+                    </div>
 
+                  </div>
+                  
+                 
+                </div>
+              </ng-container>
+              <ng-template #goilTemplate>
+                <!-- Render the other div -->
+                <div class="other">
+                  <div class="term">
+                    {{item.period}}
+                  </div>
+                  <div class="wrapper">
+                    <div class="">
+                      <img src="{{ item.image }}" height="50px" />
+                      {{ item.term }}
+                    </div>
+                    <div class="price-yield">
+                      <div>Price/Yield</div>
+                      <div class="flex-price">
+                        %
+                        <p>{{ item.priceYield }}</p>
+                      </div>
+                    </div>
+                    <div class="pointer" [class]="getPointerClass(item.figure)">
+                      <i class="fa-solid fa-caret-down" *ngIf="item.figure < 0"></i>
+                      <i class="fa-solid fa-caret-up" *ngIf="item.figure > 0"></i>
+                      %{{ item.figure }}
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+          </div>
+          
+
+          <div class="second-asset">
+            <ng-container *ngFor="let item of service.data">
+              <ng-container *ngIf="!hasTermKey(item); else goilTemplate">
+          
+                <div class="goil">
+                  <div class="f-name">
+                    {{item.fullname}}
+                  </div>
+                  <div class="wrapper">
+                    <div class="">
+                      <img src="{{ item.image }}" height="50px" />
+                      {{ item.name }}
+                    </div>
+                    <div class="price">
+                      <div>Price</div>
+                      <div class="flex-price">
+                        <i class="fa-solid fa-cedi-sign"></i>
+                        <p>{{ item.price }}</p>
+                      </div>
+                    </div>
+                    <div class="pointer" [class]="getPointerClass(item.figure)">
+                      <i class="fa-solid fa-caret-down" *ngIf="item.figure < 0"></i>
+                      <i class="fa-solid fa-caret-up" *ngIf="item.figure > 0"></i>
+                      %{{ item.figure }}
+                    </div>
+
+                  </div>
+                  
+                 
+                </div>
+              </ng-container>
+              <ng-template #goilTemplate>
+                <!-- Render the other div -->
+                <div class="other">
+                  <div class="term">
+                    {{item.period}}
+                  </div>
+                  <div class="wrapper">
+                    <div class="">
+                      <img src="{{ item.image }}" height="50px" />
+                      {{ item.term }}
+                    </div>
+                    <div class="price-yield">
+                      <div>Price/Yield</div>
+                      <div class="flex-price">
+                        %
+                        <p>{{ item.priceYield }}</p>
+                      </div>
+                    </div>
+                    <div class="pointer" [class]="getPointerClass(item.figure)">
+                      <i class="fa-solid fa-caret-down" *ngIf="item.figure < 0"></i>
+                      <i class="fa-solid fa-caret-up" *ngIf="item.figure > 0"></i>
+                      %{{ item.figure }}
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+          </div>
+          <div class="third-asset">third set</div>
+        </div>
+        
       
- 
-    </div>
+       
   </div>
   

@@ -1,27 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SidenavComponent } from '../sidenav/sidenav.component';
-import { MainNavComponent } from '../main-nav/main-nav.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatBadgeModule } from '@angular/material/badge';
-import { Chart } from 'chart.js';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { ChartConfiguration, ChartType, ChartDataset } from 'chart.js';
-import { SmoothAreaChartComponent } from '../smooth-area-chart/smooth-area-chart.component';
-
-
-
+import { AssetsService } from '../assets.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
-constructor(private route:Router){}
+export class DashboardComponent implements OnInit {
+  data: any[] = [];
+  currentValue: number = 0;
+  previousValue: number = 0;
+
+  constructor(private route: Router, public service: AssetsService) { }
+
+  ngOnInit() {
+    this.data = this.service.data;
+  }
+
+  getPointerClass(value: string): string {
+    const numericValue = parseFloat(value.replace('%', '').trim());
+    return numericValue < 0 ? 'red-pointer' : 'green-pointer';
+  }
+
+  hasTermKey(item: any): boolean {
+    return 'term' in item;
+  }
+
   
-   
 
 }
